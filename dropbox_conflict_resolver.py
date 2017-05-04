@@ -2,9 +2,9 @@ import os
 import re
 
 '''
-    This is used to revert back a Dropbox conflict. So in this case I want to keep all the files that where
+    This is used to revert back a Dropbox conflict. So in this case I want to keep all the files that were
     converted to conflict copies. So I just strip out the conflict string ie (some computer names's conflict copy some date) .ext
-    and remove that conflict part of the string, and overate the original file by that name.
+    and remove that conflict part of the string, and override the original file by that name.
 '''
 for root, dirs, files, in os.walk(r"path to your drop box file with conflicts"):
     for file in files:
