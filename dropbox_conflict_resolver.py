@@ -6,7 +6,7 @@ import re
     converted to conflict copies. So I just strip out the conflict string ie (some computer names's conflict copy some date) .ext
     and remove that conflict part of the string, and overate the original file by that name.
 '''
-for root, dirs, files, in os.walk(r"C:\Users\alexb_000\Dropbox\Work\AndroidProjects\Downpour"):
+for root, dirs, files, in os.walk(r"path to your drop box file with conflicts"):
     for file in files:
         file_matcher = re.search(r"(.+) (\(.+'s conflicted copy [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*\))(.+)?", file)
         if file_matcher:
