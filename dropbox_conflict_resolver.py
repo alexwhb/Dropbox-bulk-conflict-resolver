@@ -8,7 +8,7 @@ import re
 '''
 for root, dirs, files, in os.walk(r"path to your drop box file with conflicts"):
     for file in files:
-        file_matcher = re.search(r"(.+) (\(.+'s conflicted copy [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*\))(.+)?", file)
+        file_matcher = re.search(r"(.+) (\(.+'s conflicted copy \d{4}-\d{2}-\d+\))(.+)?", file)
         if file_matcher:
             full_path = os.path.join(root, file)
             conflict_file_name = file_matcher.group(0)
